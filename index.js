@@ -66,7 +66,7 @@ var server = gps.server(options,function(device,connection){
             'db_na_parada',
             'cl_localizacao',
             moment().format('YYYY_MM_DD_hh_mm_ss'),
-            {'localizacao': moment().format('YYYY_MM_DD_hh_mm_ss').toString}
+            {'localizacao': 'data'}
         )
     })
 

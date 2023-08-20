@@ -15,7 +15,6 @@ client
     .setKey('bd3467bacbd3f7402616c0f3bcd9b85e8bc96fec892c6fcac2b4af7dd033591f0c7f5d48de141ecf222e7b71f49286f5679c95b54d8a6472bf23d6a0b7d775e975e6fdc6bf3d35fdb4c4a9cb6fb3ac762ebcbcb04e42efc40a4bbb156eba3a496f3f0a8fe8168a638ed1f2a445f77965dc614c87d35e375369155ed3b07f2efd');        // Replace with your API Key
 
 
-
 var options = {
     'debug'                 : false, //We don't want to debug info automatically. We are going to log everything manually so you can check what happens everywhere
     'port'                  : 3000,

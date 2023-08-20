@@ -80,7 +80,7 @@ var server = gps.server(options,function(device,connection){
 
         //echo raw data package
         console.log(moment().format('YYYY-MM-DD:hh:mm:ss'));
-        console.log(data[2]); 
+        console.log(data[0]); 
        
 
         // databases.createDocument(

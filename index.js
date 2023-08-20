@@ -59,15 +59,17 @@ var server = gps.server(options,function(device,connection){
     //Also, you can listen on the native connection object
     connection.on('data',function(data){
 
+
+
         //echo raw data package
         console.log(moment().format('YYYY-MM-DD:hh:mm:ss'));
-        // console.log(data.toString()); 
-        databases.createDocument(
-            'db_na_parada',
-            'cl_localizacao',
-            moment().format('YYYY_MM_DD_hh_mm_ss'),
-            {'localizacao': 'data'}
-        )
+        console.log(data); 
+        // databases.createDocument(
+        //     'db_na_parada',
+        //     'cl_localizacao',
+        //     moment().format('YYYY_MM_DD_hh_mm_ss'),
+        //     {'localizacao': 'data'}
+        // )
     })
 
 })

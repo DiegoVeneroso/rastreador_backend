@@ -64,7 +64,6 @@ var server = gps.server(options,function(device,connection){
         console.log(moment().format('YYYY-MM-DD:hh:mm:ss'));
         console.log(data.toString()); 
         databases.createDocument(
-
             'db_na_parada',
             'cl_localizacao',
             moment().format('YYYY_MM_DD_hh_mm_ss'),

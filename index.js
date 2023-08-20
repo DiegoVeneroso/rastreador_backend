@@ -2,7 +2,6 @@ var gps = require("gps-tracking");
 var moment = require('moment');
 // const { Client, Databases, Functions, Account, Users, Storage, InputFile, Query, Permission, Role, ID } = require('node-appwrite');
 const sdk = require('node-appwrite')
-const uuid = require('uuid');
 
 const client = new sdk.Client();
 
@@ -26,12 +25,7 @@ client
 
 // const promisse = databases.createDocument('cl_localizacao', 'unique()', {'localizacao': 'fadsfsd fs fsd fsd '});
 
-databases.createDocument(
-    'db_na_parada',
-    'cl_localizacao',
-    'fdsafg',
-    {'localizacao': 'fadsfsd fs fsd fsd '}
-)
+
 
 // promisse.then(function(response){
 //     console.log(response);
@@ -47,7 +41,7 @@ var options = {
 }
 
 var server = gps.server(options,function(device,connection){
-
+æ
     device.on("connected",function(data){
 
         console.log("I'm a new device connected");
@@ -87,6 +81,13 @@ var server = gps.server(options,function(device,connection){
         //echo raw data package
         console.log(moment().format('YYYY-MM-DD:hh:mm:ss'));
         console.log(data.toString()); 
+
+        // databases.createDocument(
+        //     'db_na_parada',
+        //     'cl_localizacao',
+        //     'fdsgdfs',
+        //     {'localizacao': 'fadsfsd fs fsd fsd '}
+        // )
     })
 
 })

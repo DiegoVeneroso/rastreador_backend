@@ -62,16 +62,16 @@ var server = gps.server(options,function(device,connection){
 
         //echo raw data package
         console.log(moment().format('YYYY-MM-DD:hh:mm:ss'));
-        var parts = data.toString.split(',')
+        // var parts = data.toString.split(',')
     
-        console.log('parts')
-        console.log(parts)
+        // console.log('parts')
+        // console.log(parts)
     
 
         console.log('data'); 
         console.log(data); 
 
-
+        console.log("I'm here: "+data.latitude+", "+data.longitude+" )");
         // databases.createDocument(
         //     'db_na_parada',
         //     'cl_localizacao',

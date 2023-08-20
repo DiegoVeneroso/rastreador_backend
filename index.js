@@ -58,8 +58,17 @@ var server = gps.server(options,function(device,connection){
 
     //Also, you can listen on the native connection object
     connection.on('data',function(data){
-
-
+        this.bufferToHexString = function (buffer) {
+            var str = '';
+            for (var i = 0; i < buffer.length; i++) {
+            if (buffer[i] < 16) {
+            str += '0';
+            }
+            str += buffer[i].toString(16);
+            }
+            return str;
+            };
+        data = this.bufferToHexString(data);
 
         //echo raw data package
         console.log(moment().format('YYYY-MM-DD:hh:mm:ss'));

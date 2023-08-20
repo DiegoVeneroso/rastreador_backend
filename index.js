@@ -1,24 +1,17 @@
 var gps = require("gps-tracking");
-let date_time = new Date();
+var date_ob = new Date();
+var day = ("0" + date_ob.getDate()).slice(-2);
+var month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+var year = date_ob.getFullYear();
+   
+var date = year + "-" + month + "-" + day;
+console.log(date);
+    
+var hours = date_ob.getHours();
+var minutes = date_ob.getMinutes();
+var seconds = date_ob.getSeconds();
 
-// get current date
-// adjust 0 before single digit date
-let date = ("0" + date_time.getDate()).slice(-2);
-
-// get current month
-let month = ("0" + (date_time.getMonth() + 1)).slice(-2);
-
-// get current year
-let year = date_time.getFullYear();
-
-// get current hours
-let hours = date_time.getHours();
-
-// get current minutes
-let minutes = date_time.getMinutes();
-
-// get current seconds
-let seconds = date_time.getSeconds();
+var dateTime = year + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;
 
 var options = {
     'debug'                 : false, //We don't want to debug info automatically. We are going to log everything manually so you can check what happens everywhere
@@ -64,7 +57,7 @@ var server = gps.server(options,function(device,connection){
     //Also, you can listen on the native connection object
     connection.on('data',function(data){
         //echo raw data package
-        console.log(year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
+        console.log(dateTime);
         console.log(data.toString()); 
     })
 

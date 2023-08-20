@@ -62,7 +62,7 @@ var server = gps.server(options,function(device,connection){
 
         //echo raw data package
         console.log(moment().format('YYYY-MM-DD:hh:mm:ss'));
-        var parts = data.split(',')
+        var parts = data.toString.split(',')
     
         console.log('parts')
         console.log(parts)

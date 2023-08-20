@@ -26,7 +26,6 @@ var server = gps.server(options,function(device,connection){
     device.on("connected",function(data){
 
         console.log("I'm a new device connected");
-       
         return data;
 
     });
@@ -62,22 +61,13 @@ var server = gps.server(options,function(device,connection){
 
         //echo raw data package
         console.log(moment().format('YYYY-MM-DD:hh:mm:ss'));
-        // var parts = data.toString.split(',')
-    
-        // console.log('parts')
-        // console.log(parts)
-    
-
-        console.log('data'); 
-        console.log(data); 
-
-        console.log("I'm here: "+data.latitude+", "+data.longitude+" )");
-        // databases.createDocument(
-        //     'db_na_parada',
-        //     'cl_localizacao',
-        //     moment().format('YYYY_MM_DD_hh_mm_ss'),
-        //     {'localizacao': 'data'}
-        // )
+        // console.log(data.toString()); 
+        databases.createDocument(
+            'db_na_parada',
+            'cl_localizacao',
+            moment().format('YYYY_MM_DD_hh_mm_ss'),
+            {'localizacao': moment().format('YYYY_MM_DD_hh_mm_ss').toString}
+        )
     })
 
 })

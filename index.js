@@ -47,7 +47,7 @@ var server = gps.server(options,function(device,connection){
     connection.on('data',function(data){
 
         //echo raw data package
-        console.log(moment().format('yyyy-mm-dd:hh:mm:ss'));
+        console.log(moment().format('YYYY-MM-DD:hh:mm:ss'));
         console.log(data.toString()); 
     })
 
